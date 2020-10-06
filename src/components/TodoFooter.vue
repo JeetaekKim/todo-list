@@ -8,7 +8,9 @@
 export default {
   methods: {
     clearTodo() {
-      localStorage.clear();
+      //   localStorage.clear();
+      console.log("TodoFooter - clearTodo check");
+      this.$emit("removeAll");
     },
   },
 };

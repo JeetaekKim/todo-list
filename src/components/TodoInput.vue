@@ -27,11 +27,12 @@ export default {
       if (this.newTodoItem !== "") {
         var value = this.newTodoItem && this.newTodoItem.trim();
         if (value !== "loglevel:webpack-dev-server") {
-          localStorage.setItem(value, value);
+          this.$emit("addTodo", value);
         }
         this.clearInput();
       }
     },
+
     clearInput() {
       this.newTodoItem = "";
     },
